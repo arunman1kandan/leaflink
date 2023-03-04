@@ -13,6 +13,9 @@ def getPlantDiseaseData():
 	else:
 		return f"{request.method} will not work";
 
+@app.route('/getPlantDiseases')
+def getPlantDiseaseDatas():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 @app.route('/')
 def index():

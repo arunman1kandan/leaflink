@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/getPlantDisease",methods=["POST"])
 def getPlantDiseaseData():
 	if(request.method=="POST"):
-		imageUrl = request.get_json()["imageURL"]
+		data = request.get_json()
+		imageUrl = data["imageURL"]
 		print(fetchResponse(imageUrl))
 		return fetchResponse(imageUrl)
 	else:
